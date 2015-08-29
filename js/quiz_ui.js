@@ -27,7 +27,6 @@ var finish = function () {
   var quizElement = document.getElementById('quiz');
   quizElement.innerHTML = '<h1>Game Over</h1';
   quizElement.innerHTML += '<h2>You got ' + totalCorrect + ' questions correct.</h2>';  
-  
 }
 
 // Check to see if this is the last question
@@ -46,7 +45,7 @@ guess0.onclick = function () {
     currentQuestion = currentQuestion + 1;
     addOne();
     checkDone(currentQuestion);
-  } else if (quiz.questions[currentQuestion].correct != choice0.innerHTML) {
+  } else {
     currentQuestion = currentQuestion + 1;
     checkDone(currentQuestion);
   }
@@ -58,7 +57,7 @@ guess1.onclick = function () {
     currentQuestion = currentQuestion + 1;
     addOne();
     checkDone(currentQuestion);
-  } else if (quiz.questions[currentQuestion].correct != choice1.innerHTML) {
+  } else {
     currentQuestion = currentQuestion + 1;
     checkDone(currentQuestion);
   }
